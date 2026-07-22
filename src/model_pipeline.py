@@ -50,7 +50,8 @@ def run_comparative_study(model_name, train_df, test_df, num_labels, seeds=[42, 
             num_train_epochs=10,
             load_best_model_at_end=True,
             metric_for_best_model="macro_f1",
-            seed=seed, # تمرير البذرة هنا
+            save_total_limit=1,
+            seed=seed,
             report_to="none"
         )
 
